@@ -1,8 +1,8 @@
 <template>
     <div class="flex items-center justify-center min-h-screen px-4 py-20">
-      <div class="max-w-3xl mx-auto animate-fadeIn">
+      <div class="max-w-3xl mx-auto">
         <!-- Main Title -->
-        <h1 class="text-4xl font-bold mb-8 text-center animate-slideDown">
+        <h1 class="text-4xl font-bold mb-8 text-center opacity-0 animate-slideDown">
           <span class="bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent">
             ./
           </span>
@@ -12,8 +12,8 @@
         <!-- Cards Container -->
         <div class="space-y-4">
           <!-- Introduction Card -->
-          <div class="animate-slideUp" style="animation-delay: 200ms;">
-            <div class="bg-white/50 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="opacity-0 animate-slideUp" style="animation-delay: 400ms;">
+            <div class="bg-white/50 backdrop-blur-sm p-8 rounded-2xl shadow-md">
               <h2 class="text-xl font-medium mb-3 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-400">
                 Introduction
               </h2>
@@ -46,8 +46,8 @@
           </div>
   
           <!-- Position Card -->
-          <div class="animate-slideUp" style="animation-delay: 400ms;">
-            <div class="bg-white/50 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="opacity-0 animate-slideUp" style="animation-delay: 600ms;">
+            <div class="bg-white/50 backdrop-blur-sm p-8 rounded-2xl shadow-md">
               <h2 class="text-xl font-medium mb-3 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-400">
                 Position
               </h2>
@@ -58,65 +58,92 @@
           </div>
   
           <!-- Arsenal Card -->
-          <div class="animate-slideUp" style="animation-delay: 600ms;">
-            <div class="bg-white/50 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="opacity-0 animate-slideUp" style="animation-delay: 800ms;">
+            <div class="bg-white/50 backdrop-blur-sm p-8 rounded-2xl shadow-md">
               <h2 class="text-xl font-medium mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-400">
                 Arsenal
               </h2>
               <!-- Grid for tech stack -->
               <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
                 <!-- C++ -->
-                <div class="flex items-center space-x-3 bg-white/60 p-3 rounded-lg hover:shadow-sm transition-all duration-300">
-                  <Icon icon="logos:c-plusplus" class="w-5 h-5" />
-                  <span class="text-gray-700">C/C++</span>
+                <div class="tech-card group relative flex items-center space-x-3 bg-white/60 p-3 rounded-lg transition-all duration-300 overflow-hidden">
+                  <div class="absolute inset-0 w-full h-full translate-x-[-101%] bg-pink-200 group-hover:translate-x-0 transition-transform duration-300"></div>
+                  <div class="relative z-10 flex items-center space-x-3">
+                    <Icon icon="logos:c-plusplus" class="w-5 h-5" />
+                    <span class="text-gray-700 group-hover:text-gray-800 transition-colors duration-300">C/C++</span>
+                  </div>
                 </div>
   
                 <!-- Rust -->
-                <div class="flex items-center space-x-3 bg-white/60 p-3 rounded-lg hover:shadow-sm transition-all duration-300">
-                  <Icon icon="logos:rust" class="w-5 h-5" />
-                  <span class="text-gray-700">Rust</span>
+                <div class="tech-card group relative flex items-center space-x-3 bg-white/60 p-3 rounded-lg transition-all duration-300 overflow-hidden">
+                  <div class="absolute inset-0 w-full h-full translate-x-[-101%] bg-pink-200 group-hover:translate-x-0 transition-transform duration-300"></div>
+                  <div class="relative z-10 flex items-center space-x-3">
+                    <Icon icon="logos:rust" class="w-5 h-5" />
+                    <span class="text-gray-700 group-hover:text-gray-800 transition-colors duration-300">Rust</span>
+                  </div>
                 </div>
   
                 <!-- Go -->
-                <div class="flex items-center space-x-3 bg-white/60 p-3 rounded-lg hover:shadow-sm transition-all duration-300">
-                  <Icon icon="logos:go" class="w-5 h-5" />
-                  <span class="text-gray-700">Go</span>
+                <div class="tech-card group relative flex items-center space-x-3 bg-white/60 p-3 rounded-lg transition-all duration-300 overflow-hidden">
+                  <div class="absolute inset-0 w-full h-full translate-x-[-101%] bg-pink-200 group-hover:translate-x-0 transition-transform duration-300"></div>
+                  <div class="relative z-10 flex items-center space-x-3">
+                    <Icon icon="logos:go" class="w-5 h-5" />
+                    <span class="text-gray-700 group-hover:text-gray-800 transition-colors duration-300">Go</span>
+                  </div>
                 </div>
   
                 <!-- Python -->
-                <div class="flex items-center space-x-3 bg-white/60 p-3 rounded-lg hover:shadow-sm transition-all duration-300">
-                  <Icon icon="logos:python" class="w-5 h-5" />
-                  <span class="text-gray-700">Python</span>
+                <div class="tech-card group relative flex items-center space-x-3 bg-white/60 p-3 rounded-lg transition-all duration-300 overflow-hidden">
+                  <div class="absolute inset-0 w-full h-full translate-x-[-101%] bg-pink-200 group-hover:translate-x-0 transition-transform duration-300"></div>
+                  <div class="relative z-10 flex items-center space-x-3">
+                    <Icon icon="logos:python" class="w-5 h-5" />
+                    <span class="text-gray-700 group-hover:text-gray-800 transition-colors duration-300">Python</span>
+                  </div>
                 </div>
   
                 <!-- TypeScript -->
-                <div class="flex items-center space-x-3 bg-white/60 p-3 rounded-lg hover:shadow-sm transition-all duration-300">
-                  <Icon icon="logos:typescript-icon" class="w-5 h-5" />
-                  <span class="text-gray-700">TypeScript</span>
+                <div class="tech-card group relative flex items-center space-x-3 bg-white/60 p-3 rounded-lg transition-all duration-300 overflow-hidden">
+                  <div class="absolute inset-0 w-full h-full translate-x-[-101%] bg-pink-200 group-hover:translate-x-0 transition-transform duration-300"></div>
+                  <div class="relative z-10 flex items-center space-x-3">
+                    <Icon icon="logos:typescript-icon" class="w-5 h-5" />
+                    <span class="text-gray-700 group-hover:text-gray-800 transition-colors duration-300">TypeScript</span>
+                  </div>
                 </div>
   
                 <!-- Docker -->
-                <div class="flex items-center space-x-3 bg-white/60 p-3 rounded-lg hover:shadow-sm transition-all duration-300">
-                  <Icon icon="logos:docker-icon" class="w-5 h-5" />
-                  <span class="text-gray-700">Docker</span>
+                <div class="tech-card group relative flex items-center space-x-3 bg-white/60 p-3 rounded-lg transition-all duration-300 overflow-hidden">
+                  <div class="absolute inset-0 w-full h-full translate-x-[-101%] bg-pink-200 group-hover:translate-x-0 transition-transform duration-300"></div>
+                  <div class="relative z-10 flex items-center space-x-3">
+                    <Icon icon="logos:docker-icon" class="w-5 h-5" />
+                    <span class="text-gray-700 group-hover:text-gray-800 transition-colors duration-300">Docker</span>
+                  </div>
                 </div>
   
                 <!-- Redis -->
-                <div class="flex items-center space-x-3 bg-white/60 p-3 rounded-lg hover:shadow-sm transition-all duration-300">
-                  <Icon icon="logos:redis" class="w-5 h-5" />
-                  <span class="text-gray-700">Redis</span>
+                <div class="tech-card group relative flex items-center space-x-3 bg-white/60 p-3 rounded-lg transition-all duration-300 overflow-hidden">
+                  <div class="absolute inset-0 w-full h-full translate-x-[-101%] bg-pink-200 group-hover:translate-x-0 transition-transform duration-300"></div>
+                  <div class="relative z-10 flex items-center space-x-3">
+                    <Icon icon="logos:redis" class="w-5 h-5" />
+                    <span class="text-gray-700 group-hover:text-gray-800 transition-colors duration-300">Redis</span>
+                  </div>
                 </div>
   
                 <!-- PostgreSQL -->
-                <div class="flex items-center space-x-3 bg-white/60 p-3 rounded-lg hover:shadow-sm transition-all duration-300">
-                  <Icon icon="logos:postgresql" class="w-5 h-5" />
-                  <span class="text-gray-700">Postgres</span>
+                <div class="tech-card group relative flex items-center space-x-3 bg-white/60 p-3 rounded-lg transition-all duration-300 overflow-hidden">
+                  <div class="absolute inset-0 w-full h-full translate-x-[-101%] bg-pink-200 group-hover:translate-x-0 transition-transform duration-300"></div>
+                  <div class="relative z-10 flex items-center space-x-3">
+                    <Icon icon="logos:postgresql" class="w-5 h-5" />
+                    <span class="text-gray-700 group-hover:text-gray-800 transition-colors duration-300">Postgres</span>
+                  </div>
                 </div>
   
                 <!-- RabbitMQ -->
-                <div class="flex items-center space-x-3 bg-white/60 p-3 rounded-lg hover:shadow-sm transition-all duration-300">
-                  <Icon icon="logos:rabbitmq-icon" class="w-5 h-5" />
-                  <span class="text-gray-700">RabbitMQ</span>
+                <div class="tech-card group relative flex items-center space-x-3 bg-white/60 p-3 rounded-lg transition-all duration-300 overflow-hidden">
+                  <div class="absolute inset-0 w-full h-full translate-x-[-101%] bg-pink-200 group-hover:translate-x-0 transition-transform duration-300"></div>
+                  <div class="relative z-10 flex items-center space-x-3">
+                    <Icon icon="logos:rabbitmq-icon" class="w-5 h-5" />
+                    <span class="text-gray-700 group-hover:text-gray-800 transition-colors duration-300">RabbitMQ</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -131,11 +158,6 @@
   </script>
   
   <style scoped>
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
   @keyframes slideDown {
     0% { 
       opacity: 0;
@@ -156,10 +178,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-  }
-  
-  .animate-fadeIn {
-    animation: fadeIn 0.8s ease-out forwards;
   }
   
   .animate-slideDown {
