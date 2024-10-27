@@ -19,7 +19,7 @@
           
           <!-- Text Section -->
           <div class="px-4 pr-6">
-            <span class="text-gray-800 font-medium text-lg tracking-wide">Youne</span>
+            <span class="text-gray-700 font-medium text-lg tracking-wide">Youne</span>
           </div>
         </div>
   
@@ -36,20 +36,20 @@
             v-show="isDropdownOpen || isHovered"
             @mouseenter="isHovered = true"
             @mouseleave="isHovered = false"
-            class="absolute top-full left-0 mt-2 py-2 w-48 bg-white rounded-xl shadow-lg"
+            class="absolute top-full left-0 mt-2 py-2 w-48 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg"
           >
             <!-- Home Link -->
             <NuxtLink 
               to="/"
-              class="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors duration-200 font-medium"
+              class="block px-4 py-2 text-gray-700 transition-colors duration-200 font-medium hover:text-pink-400"
             >
-                Home
+              Home
             </NuxtLink>
             
             <!-- Login Link -->
             <NuxtLink 
               to="/login"
-              class="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors duration-200 font-medium"
+              class="block px-4 py-2 text-gray-700 transition-colors duration-200 font-medium hover:text-pink-400"
             >
               Login
             </NuxtLink>
@@ -57,7 +57,7 @@
             <!-- About Link -->
             <NuxtLink 
               to="/about"
-              class="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors duration-200 font-medium"
+              class="block px-4 py-2 text-gray-700 transition-colors duration-200 font-medium hover:text-pink-400"
             >
               About
             </NuxtLink>
